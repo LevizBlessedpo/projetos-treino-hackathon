@@ -45,7 +45,6 @@ async def analisar_emergencia(dados: EmergenciaRequest):
     texto_resposta = resposta.choices[0].message.content
     return {"resultado": texto_resposta}
 
-    #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
 
 
 
