@@ -1,0 +1,287 @@
+/* ===== CONFIGURAÇÕES GERAIS ===== */
+
+body {
+width: 100%;
+margin: 0;
+padding: 0;
+background-color: whitesmoke;
+font-family: Arial, sans-serif;
+color: #333;
+}
+
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* ===== CONTÊINER DE CONTEÚDO (MUITO IMPORTANTE) ===== */
+
+/* Essa classe impede que elementos como h1, parágrafos e listas estiquem 100% da tela */
+
+.site-container {
+max-width: 900px;
+margin: 0 auto;
+padding: px;
+box-sizing: border-box;
+}
+
+
+/* ===== CABEÇALHO (BANNER SUPERIOR DE PONTA A PONTA) ===== */
+.cabecalho {
+background-color: #1b5e20;
+color: white;
+width: 100%;
+padding: 30px 0;
+box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+
+.cabecalho h2 {
+margin: 0;
+padding: 0 40px;
+font-size: 32px;
+text-align: center;
+
+}
+
+
+.cabecalho p {
+
+margin: 10px 0 0 0;
+padding: 0 40px;
+font-size: 18px;
+color: rgba(255, 255, 255, 0.9);
+text-align: center;
+
+}
+
+
+/* ===== ELEMENTOS TEXTUAIS E ESTRUTURA ===== */
+
+article {
+margin-bottom: 50px;
+}
+
+
+/* Corrigido: Agora o título verde respeita os limites da tela e não vaza */
+
+h1 {
+color: white;
+background-color: #2e7d32; /* Verde floresta mais moderno */
+padding: 20px;
+border-radius: 10px;
+font-size: 28px;
+text-align: center;
+margin-top: 30px;
+margin-bottom: 25px;
+box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+
+.paragrafo {
+color: black;
+text-align: justify; /* Alinhamento justificado fica mais profissional */
+background-color: white;
+border-left: 8px solid #1b5e20;
+border-radius: 10px;
+padding: 20px;
+font-size: 18px;
+line-height: 1.6;
+box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+}
+
+
+/* ===== LISTAS INTERATIVAS ===== */
+
+ul {
+font-size: 18px;
+list-style-type: square;
+padding-left: 20px;
+margin-top: 20px;
+}
+
+
+li {
+background-color: #ffffff;
+border-left: 5px solid #2e7d32;
+margin-bottom: 12px;
+padding: 14px;
+border-radius: 6px;
+box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+transition: transform 0.2s, box-shadow 0.2s;
+}
+
+
+li:hover {
+transform: translateX(4px);
+box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+}
+
+
+/* ===== IMAGENS E GRÁFICOS ===== */
+
+/* Corrigido: Protege a imagem de fundos externos e centraliza perfeitamente */
+
+img {
+display: block;
+margin: 30px auto;
+max-width: 100%; /* Garante que a foto não quebre em telas de celulares */
+width: 750px;
+height: auto;
+border-radius: 12px;
+border: 5px solid #1b5e20; /* Borda mais limpa e moderna que a "ridge" */
+box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.figcaption-container {
+    color: black !important;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.grafico {
+background-color: white;
+border-radius: 12px;
+padding: 25px;
+width: 100%;
+max-width: 1000px;
+margin: 30px auto;
+box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+box-sizing: border-box;
+}
+
+
+/* ===== BOTÕES DE NAVEGAÇÃO ===== */
+
+.botao {
+display: block;
+margin: 40px auto;
+width: max-content;
+padding: 18px 35px;
+text-decoration: none;
+background-color: #2e7d32;
+color: white;
+font-size: 20px;
+font-weight: bold;
+border-radius: 8px;
+cursor: pointer;
+box-shadow: 0 4px 10px rgba(46, 125, 50, 0.3);
+transition: background-color 0.2s, transform 0.1s, box-shadow 0.2s;
+}
+
+
+.botao:hover {
+background-color: #1b5e20;
+box-shadow: 0 6px 14px rgba(27, 94, 32, 0.4);
+}
+
+.botao:active {
+transform: scale(0.98);
+}
+
+
+/* ===== RODAPÉ ===== */
+
+.rod-texto {
+width: 100%;
+padding: 40px 10px;
+margin: 0;
+margin-top: 60px;
+background-color: #1b5e20; /* Verde bem escuro e denso */
+color: white;
+box-sizing: border-box;
+}
+
+
+.rod-texto h2 {
+margin: 0;
+padding: 10px 30px;
+font-size: 24px;
+color: white;
+text-align: center;
+}
+
+
+.rod-texto p {
+margin: 0;
+padding: 0 40px 5px 40px;
+font-size: 18px;
+color: rgba(255,255,255,0.7);
+text-align: center;
+}
+
+/* ===== FOLHAS CAINDO (DECORATIVO) ===== */
+
+.folhas-container {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+pointer-events: none;
+overflow: hidden;
+z-index: -1;
+}
+
+
+.folha {
+position: absolute;
+top: -30px;
+border-radius: 0 100% 0 100%;
+opacity: 0.85;
+animation-name: cair-balancar;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+}
+
+
+@keyframes cair-balancar {
+
+0% {
+transform: translateY(-10vh) translateX(0) rotate(0deg);
+opacity: 0.9;
+}
+
+50% {
+transform: translateY(50vh) translateX(40px) rotate(180deg);
+}
+
+100% {
+transform: translateY(110vh) translateX(-30px) rotate(360deg);
+opacity: 0.6;
+}
+
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+.folhas-container {
+display: none;
+}
+
+}
+
+/* ===== DARK MODE (SUPORTE) ===== */
+
+body.dark-mode {
+    background-color: #1a241f !important; /* Fundo escuro */
+}
+
+/* Garante que TODOS os textos comuns fiquem brancos/claros */  
+body.dark-mode .paragrafo,
+body.dark-mode li, #figcaption-container{
+    background-color: #2c3b32 !important;
+    color: whitesmoke !important;
+}
+
+body.dark-mode .figcaption-container {
+    color: #ffffff !important;
+}
+
+body.dark-mode article h1 {
+    color: #2c3b32 !important; 
+    background-color: whitesmoke !important;
+    border-radius: 10px;
+} 

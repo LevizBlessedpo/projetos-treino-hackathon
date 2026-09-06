@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoramento de Queimadas - Amazônia</title>
+    <link rel="stylesheet" href="satelite.css">
+</head>
+<body>
+
+
+    <header class="satelite-header">
+        <div class="header-conteudo">
+            <h1>🛰️ Sistema de Monitoramento de Focos</h1>
+            <p>Conexão direta com a malha de dados de satélites da Amazônia Legal</p>
+        </div>
+        <a href="index.html" class="btn-voltar">⬅️ Voltar ao Início</a>
+    </header>
+
+
+    <main class="satelite-container">
+
+        <section class="card-painel-principal">
+            <div class="info-total">
+                <span class="subtitulo">Focos de Calor Detectados Hoje</span>
+                <h2 id="contadorTotal">...</h2> 
+                <p id="statusStatus" class="status-texto">Buscando conexão com o satélite...</p>
+            </div>
+            <div class="acao-painel">
+                <button id="btnAtualizar" class="btn-atualizar">🔄 Atualizar Dados</button>
+            </div>
+        </section>
+
+
+        <section class="secao-grafico">
+            <h3>📈 Tendência Semanal de Focos de Calor</h3>
+            <p>Histórico consolidado comparando os dados dos últimos 7 dias na Amazônia Legal.</p>
+            <div class="container-canvas">
+                <canvas id="graficoFocos"></canvas>
+            </div>
+        </section>
+
+
+        <section class="secao-detalhes">
+            <h3>📊 Situação por Estado</h3>
+            <p>Divisão de focos de incêndio ativos nas últimas 24 horas por região geográfica:</p>
+            <ul id="listaEstadosGeral" class="grid-estados">
+                <li class="carregando">Carregando dados de geolocalização do backend...</li>
+            </ul>
+        </section>
+
+        <section class="secao-denuncia">
+            <h3>🔥 Registrar Denúncia de Queimada</h3>
+            <p>Viu um foco de incêndio não listado? Registre aqui.</p>
+            <form id="form-denuncia">
+                <input type="text" id="localizacao" name="localizacao" placeholder="Localização (ex: Manaus, AM)" required>
+                <textarea id="descricao" name="descricao" placeholder="Descreva a ocorrência..." required></textarea>
+                <button type="submit" id="btn-denuncia">Enviar Denúncia</button>
+                <div id="feedback-denuncia" class="feedback-msg" style="display: none;"></div>
+            </form>
+        </section>
+
+    </main>
+
+    <footer class="satelite-footer">
+        <p>&copy; 2026 - Projeto de Monitoramento Ambiental Amazônia Viva. Desenvolvido para o Hackathon.</p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script_satelite.js"></script>
+</body>
+</html>
